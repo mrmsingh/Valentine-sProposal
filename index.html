@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>To my love Mandeep 💖 | From Hubby Maninder</title>
+
+<style>
+  :root{
+    --bg1:#ffe6ef; --bg2:#ffd1dc; --bg3:#fff2f7;
+    --card:#ffffffcc; --text:#1f2937; --accent:#ff2d6f;
+    --shadow: 0 18px 50px rgba(0,0,0,.16); --radius: 26px;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100vh;
+    font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
+    color:var(--text);
+    background: radial-gradient(900px 600px at 20% 10%, var(--bg3) 0%, var(--bg1) 45%, var(--bg2) 100%);
+    overflow:hidden; /* page1 no scroll; page2 has internal scroll */
+    text-align:center;
+  }
+
+  .wrap{ min-height:100vh; display:grid; place-items:center; padding:16px; }
+
+  /* Stable viewport container */
+  .card{
+    width:min(980px, 94vw);
+    height: 92vh;
+    background: var(--card);
+    border: 1px solid rgba(255,255,255,.55);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    padding: clamp(16px, 3.6vw, 34px);
+    backdrop-filter: blur(10px);
+    position:relative;
+    overflow:hidden;
+  }
+
+  .sparkle{
+    position:absolute; inset:-1px; border-radius: var(--radius);
+    pointer-events:none;
+    background:
+      radial-gradient(600px 260px at 15% 10%, rgba(255,255,255,.75), transparent 55%),
+      radial-gradient(620px 280px at 85% 20%, rgba(255,255,255,.55), transparent 60%);
+    mix-blend-mode: screen; opacity:.6;
+  }
+
+  h1{ margin: 0 0 6px; font-size: clamp(28px, 4.8vw, 56px); line-height:1.05; letter-spacing:-.02em; }
+  .sub{ margin:0 0 14px; font-size: clamp(14px, 1.9vw, 18px); opacity:.88; }
+
+  .names{
+    display:flex; flex-wrap:wrap; gap:10px;
+    justify-content:center; align-items:center;
+    margin: 6px 0 14px; opacity:.92;
+  }
+  .pill{
+    padding:8px 12px; border-radius:999px;
+    background: rgba(255,255,255,.75);
+    border:1px solid rgba(255,255,255,.65);
+    font-weight:900; font-size:13px;
+    display:inline-flex; gap:8px; align-items:center;
+  }
+
+  .btnrow{ display:flex; gap:12px; flex-wrap:wrap; justify-content:center; align-items:center; margin-top: 14px; }
+
+  button{
+    border:0;
+    padding:14px 18px;
+    border-radius:16px;
+    font-size:18px;
+    font-weight:950;
+    cursor:pointer;
+    transition: transform .12s ease;
+    user-select:none;
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+  }
+  button:active{ transform: scale(.98); }
+
+  .yes{
+    background: linear-gradient(135deg, var(--accent), #ff7aa6);
+    color:white;
+    box-shadow: 0 12px 28px rgba(255,45,111,.28);
+  }
+  .soft{
+    background: rgba(255,255,255,.92);
+    border: 1px solid rgba(0,0,0,.06);
+    box-shadow: 0 10px 26px rgba(0,0,0,.08);
+    color: #1f2937;
+  }
+
+  /* Optional styling once NO enters prank mode */
+  .noPrank{
+    background: rgba(31,41,55,.16);
+    color: rgba(31,41,55,.92);
+    border: 1px solid rgba(31,41,55,.12);
+    box-shadow: 0 10px 22px rgba(0,0,0,.08);
+  }
+
+  .hint{ margin-top:14px; font-size:14px; opacity:.82; }
+  .tiny{ margin-top: 10px; font-size: 12px; opacity: .7; }
+  .hidden{ display:none !important; }
+
+  /* Screen 1: centered, no scroll */
+  .screen1{
+    height: 100%;
+    display:grid;
+    place-items:center;
+  }
+  .hero{ max-width: 860px; margin: 0 auto; padding: 10px 8px; }
+  .heroCard{
+    background: rgba(255,255,255,.55);
+    border:1px solid rgba(0,0,0,.05);
+    border-radius: 20px;
+    padding: 14px 14px;
+    margin: 14px auto 0;
+    text-align:left;
+  }
+  .heroCard b{ font-weight:950; }
+  .heroCard ul{ margin: 8px 0 0; padding-left: 18px; line-height:1.45; }
+  .heroCard li{ margin: 5px 0; }
+
+  /* Screen 2: header fixed, content scrolls */
+  .screen2{
+    height: 100%;
+    display:flex;
+    flex-direction:column;
+    gap: 10px;
+  }
+  .screen2Header{ flex: 0 0 auto; }
+  .screen2Scroll{
+    flex: 1 1 auto;
+    overflow:auto;
+    -webkit-overflow-scrolling: touch;
+    padding-right: 6px;
+  }
+
+  .grid{
+    display:grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:12px;
+    margin-top: 12px;
+  }
+  @media (max-width:640px){
+    .grid{ grid-template-columns: 1fr; }
+  }
+
+  .statusLine{ margin-top: 10px; font-weight: 950; opacity:.9; }
+
+  .details{
+    margin-top:14px;
+    text-align:left;
+    background: rgba(255,255,255,.94);
+    border: 1px solid rgba(0,0,0,.06);
+    border-radius: 18px;
+    padding: 14px 14px;
+  }
+  .details h2{ margin:0 0 8px; font-size: clamp(18px, 2.8vw, 24px); letter-spacing:-.01em; }
+  .details p{ margin: 0 0 10px; line-height:1.5; opacity:.92; }
+  .list{ margin: 8px 0 0; padding-left: 18px; line-height: 1.55; }
+
+  .row{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 10px; justify-content:flex-start; }
+  .chip{
+    display:inline-flex; align-items:center; gap:8px;
+    padding:10px 12px; border-radius:999px;
+    background: rgba(255,255,255,.95);
+    border:1px solid rgba(0,0,0,.06);
+    font-weight:900; font-size:13px;
+  }
+
+  .venuePicker{ margin-top:10px; display:grid; gap:8px; }
+  .venueRow{
+    display:flex; gap:10px; align-items:flex-start;
+    padding:10px 10px; border-radius: 14px;
+    border: 1px solid rgba(0,0,0,.06);
+    background: rgba(255,255,255,.94);
+    cursor:pointer;
+  }
+  .venueRow input{ margin-top:3px; }
+
+  .msgbox{
+    margin-top:12px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,.06);
+    background: rgba(255,255,255,.95);
+    padding: 12px;
+  }
+  .msgbox textarea{
+    width:100%;
+    min-height: 120px;
+    resize: vertical;
+    border-radius: 12px;
+    border: 1px solid rgba(0,0,0,.08);
+    padding: 10px;
+    font: inherit;
+    line-height: 1.35;
+  }
+
+  .stickyBar{
+    position: sticky;
+    bottom: 0;
+    margin-top: 12px;
+    padding: 10px 10px;
+    background: linear-gradient(to top, rgba(255,255,255,.98), rgba(255,255,255,.82));
+    border-top: 1px solid rgba(0,0,0,.06);
+    border-radius: 18px;
+    z-index: 50;
+  }
+  .actions{
+    display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:center;
+  }
+  .actions input{
+    flex: 1 1 240px;
+    padding: 12px 12px;
+    border-radius: 14px;
+    border: 1px solid rgba(0,0,0,.08);
+    font: inherit;
+    background: rgba(255,255,255,.98);
+    min-width: 220px;
+  }
+
+  /* Remote debug overlay */
+  .debug{
+    position:fixed;
+    left:10px; right:10px; bottom:10px;
+    background: rgba(0,0,0,.68);
+    color:white;
+    border-radius: 14px;
+    padding: 10px 12px;
+    font-size: 12px;
+    text-align:left;
+    z-index: 9999;
+    pointer-events:none;
+    white-space: pre-wrap;
+    max-height: 28vh;
+    overflow:hidden;
+  }
+
+  .burst{
+    position:fixed;
+    left:0; top:0;
+    width:12px; height:12px;
+    pointer-events:none;
+    z-index: 60;
+    font-size: 18px;
+    will-change: transform, opacity;
+  }
+</style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="card" id="card">
+      <div class="sparkle"></div>
+
+      <!-- SCREEN 1 -->
+      <div id="screen1" class="screen1">
+        <div class="hero">
+          <div class="names">
+            <div class="pill">💐 <span>To my love <b>Mandeep</b></span></div>
+            <div class="pill">🧡 <span>from your <b>Hubby Maninder</b></span></div>
+            <div class="pill">📍 <span>Adelaide + Family Valentine Mode</span></div>
+          </div>
+
+          <h1>Will you be my Valentine? 💖</h1>
+          <p class="sub">Let’s celebrate with our little ones… then steal a little “us time” too 😄</p>
+
+          <div class="heroCard">
+            <b>Tomorrow’s Morning Plan (locked 🔒):</b>
+            <ul>
+              <li>🕘 <b>9:00–12:00</b> — <b>Bounce Australia</b> ✅</li>
+              <li>🧃 Snacks + water break</li>
+              <li>📸 One cute family photo (mandatory proof)</li>
+            </ul>
+          </div>
+
+          <!-- NO is always visible here -->
+          <div class="btnrow">
+            <button class="yes" id="yesBtn" type="button">Yes 💘</button>
+            <button class="soft" id="noBtn" type="button">No 🙈</button>
+          </div>
+
+          <div class="hint" id="hint">Tap “No”… it will try to escape. (3 tries max 😜)</div>
+          <div class="tiny">After 3 attempts, the “No” button gives up and disappears 😂</div>
+        </div>
+      </div>
+
+      <!-- SCREEN 2 -->
+      <div id="screen2" class="screen2 hidden">
+        <div class="screen2Header">
+          <div class="names">
+            <div class="pill">✅ <span>Valentine Accepted</span></div>
+            <div class="pill">💞 <span>Mandeep + Maninder</span></div>
+            <div class="pill">📍 <span>Adelaide Planner</span></div>
+          </div>
+
+          <h1>YAAAAAYYY 😍🎉</h1>
+          <p class="sub">
+            Morning is <b>Bounce (9–12)</b> ✅<br/>
+            Now… what should we do <b>after</b> that? 😏
+          </p>
+        </div>
+
+        <div class="screen2Scroll" id="screen2Scroll">
+          <div class="grid" id="afterGrid">
+            <button class="soft optionBtn" type="button" data-key="lunch">🍽️ Lunch (family-friendly)</button>
+            <button class="soft optionBtn" type="button" data-key="picnic">🧺 Picnic + playground</button>
+            <button class="soft optionBtn" type="button" data-key="dessert">🍨 Dessert date (sweet tooth)</button>
+            <button class="soft optionBtn" type="button" data-key="beach">🌊 Beach / sunset walk</button>
+            <button class="soft optionBtn" type="button" data-key="movie">🍿 Movie (kids or us)</button>
+            <button class="soft optionBtn" type="button" data-key="dinner">🌙 Dinner (romantic-ish)</button>
+            <button class="soft optionBtn" type="button" data-key="staycation">🏨 Staycation (Adelaide city)</button>
+            <button class="soft optionBtn" type="button" data-key="massage">💆 Spa / massage reset</button>
+          </div>
+
+          <div class="statusLine" id="pickStatus">👆 Pick one “after Bounce” option</div>
+
+          <div class="details hidden" id="details">
+            <h2 id="detailsTitle"></h2>
+            <p id="detailsMsg"></p>
+
+            <div class="row" id="detailsChips"></div>
+
+            <p style="margin-top:12px;"><b>Adelaide venue picks (choose one):</b></p>
+            <div class="venuePicker" id="venuePicker"></div>
+
+            <p style="margin-top:14px;"><b>Mini plan:</b></p>
+            <ul class="list" id="detailsSetting"></ul>
+
+            <div class="msgbox">
+              <b>Message preview (WhatsApp-ready):</b>
+              <textarea id="messageText" readonly></textarea>
+              <div class="tiny">WhatsApp opens with message pre-filled. You still tap Send.</div>
+            </div>
+
+            <div class="row" style="margin-top:12px;">
+              <button class="yes" id="lockPlanBtn" type="button">Lock it in ✅</button>
+              <button class="soft" id="chooseAgainBtn" type="button">Choose again 🔁</button>
+            </div>
+
+            <div class="tiny" id="lockedNote" style="display:none;">
+              ✅ Locked. Hubby Maninder has entered “planner mode” 😎📅
+            </div>
+          </div>
+
+          <div class="stickyBar">
+            <div class="actions">
+              <input id="whatsNumber" placeholder="WhatsApp number optional (e.g., +614xxxxxxxx) — or leave blank to choose contact" />
+              <button class="yes" id="sendWhatsBtn" type="button">Send to WhatsApp ✅</button>
+              <button class="soft" id="copyBtn" type="button">Copy</button>
+              <button class="soft" id="shareBtn" type="button">Share</button>
+            </div>
+          </div>
+
+          <div class="tiny" style="margin-top:10px;">Scroll here if needed ⬇️</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="debug hidden" id="debug"></div>
+
+<script>
+  // =========================
+  // Remote Debug Toggle (?debug=1&log=1)
+  // =========================
+  const params = new URLSearchParams(location.search);
+  const DEBUG_ON = params.get("debug") === "1";
+  const PERSIST_LOG = params.get("log") === "1";
+  const LOG_KEY = "valentine_debug_log_v2";
+  const MAX_LINES = 200;
+
+  const debugEl = document.getElementById("debug");
+  let logLines = [];
+
+  function initDebug(){
+    if(!DEBUG_ON){
+      debugEl.classList.add("hidden");
+      return;
+    }
+    debugEl.classList.remove("hidden");
+
+    if(PERSIST_LOG){
+      try{
+        const saved = localStorage.getItem(LOG_KEY);
+        if(saved) logLines = saved.split("\n").filter(Boolean).slice(-MAX_LINES);
+      } catch(e){}
+    }
+
+    dlog("Debug enabled ✅ (use ?debug=1&log=1 to persist)");
+    dlog("UA: " + navigator.userAgent);
+    dlog("URL: " + location.href);
+    dlog("Viewport: " + window.innerWidth + "x" + window.innerHeight);
+  }
+
+  function dlog(msg){
+    if(!DEBUG_ON) return;
+    const ts = new Date().toISOString().slice(11,19);
+    logLines.push(`[${ts}] ${msg}`);
+    if(logLines.length > MAX_LINES) logLines.shift();
+    debugEl.textContent = logLines.slice(-18).join("\n");
+
+    if(PERSIST_LOG){
+      try{ localStorage.setItem(LOG_KEY, logLines.join("\n")); } catch(e){}
+    }
+  }
+
+  window.onerror = function(message, source, lineno, colno){
+    if(DEBUG_ON) dlog(`JS ERROR: ${message} @ ${lineno}:${colno}`);
+    return false;
+  };
+
+  initDebug();
+
+  // =========================
+  // Effects
+  // =========================
+  function burst(x, y, count=16){
+    const icons = ["💖","💘","💕","✨","🌟","🫶","😄","🎀"];
+    for(let i=0;i<count;i++){
+      const b = document.createElement("div");
+      b.className = "burst";
+      b.textContent = icons[Math.floor(Math.random()*icons.length)];
+      b.style.left = x + "px";
+      b.style.top  = y + "px";
+      const angle = Math.random() * Math.PI * 2;
+      const dist  = 60 + Math.random()*140;
+      const dx    = Math.cos(angle) * dist;
+      const dy    = Math.sin(angle) * dist;
+      const rot = (-50 + Math.random()*100);
+      const dur = 550 + Math.random()*650;
+
+      b.animate([
+        { transform:`translate(0,0) rotate(0deg)`, opacity:1 },
+        { transform:`translate(${dx}px, ${dy}px) rotate(${rot}deg)`, opacity:0 }
+      ], { duration: dur, easing: "cubic-bezier(.2,.8,.2,1)" });
+
+      document.body.appendChild(b);
+      setTimeout(()=>b.remove(), dur+30);
+    }
+  }
+
+  // =========================
+  // Screen 1: YES/NO prank
+  // =========================
+  const screen1 = document.getElementById("screen1");
+  const screen2 = document.getElementById("screen2");
+  const yesBtn = document.getElementById("yesBtn");
+  const noBtn  = document.getElementById("noBtn");
+  const hint   = document.getElementById("hint");
+
+  let noClicks = 0;
+  const maxNoClicks = 3;
+  let prankMode = false;
+
+  function enablePrankMode(){
+    if(prankMode) return;
+    prankMode = true;
+
+    // become floating only AFTER first attempt
+    noBtn.style.position = "fixed";
+    noBtn.style.zIndex = "9999";
+    noBtn.style.left = "55vw";
+    noBtn.style.top  = "62vh";
+    noBtn.classList.add("noPrank");
+    dlog("NO prank mode enabled (position:fixed)");
+  }
+
+  function moveNoAway(){
+    const margin = 16;
+    const w = window.innerWidth;
+    const h = window.innerHeight;
+
+    const rect = noBtn.getBoundingClientRect();
+    const bw = Math.max(110, rect.width || 120);
+    const bh = Math.max(44, rect.height || 52);
+
+    const x = margin + Math.random() * Math.max(10, (w - bw - margin*2));
+    const y = margin + Math.random() * Math.max(10, (h - bh - margin*2));
+
+    const scale = Math.max(0.78, 1 - (noClicks * 0.06));
+    noBtn.style.transform = `scale(${scale})`;
+    noBtn.style.left = x + "px";
+    noBtn.style.top  = y + "px";
+
+    burst(x + bw/2, y + bh/2, 10);
+    dlog(`NO moved to (${Math.round(x)},${Math.round(y)}) attempt=${noClicks}`);
+  }
+
+  function onNoAttempt(e){
+    e.preventDefault();
+    e.stopPropagation();
+
+    noClicks++;
+    dlog(`NO attempt ${noClicks}`);
+
+    // first attempt triggers prank mode
+    enablePrankMode();
+
+    if(noClicks >= maxNoClicks){
+      hint.textContent = "No button gave up 😂 Only YES remains 💘";
+      noBtn.style.display = "none";
+      burst(window.innerWidth*0.5, window.innerHeight*0.35, 24);
+      dlog("NO hidden after 3 attempts");
+      return;
+    }
+
+    hint.textContent = `Nice try 😏 (attempt ${noClicks}/3)`;
+    moveNoAway();
+  }
+
+  // Prevent touch generating both touch+click
+  noBtn.addEventListener("touchstart", (e) => { e.preventDefault(); onNoAttempt(e); }, {passive:false});
+  noBtn.addEventListener("click", onNoAttempt);
+
+  yesBtn.addEventListener("click", (e) => {
+    burst(e.clientX || window.innerWidth/2, e.clientY || window.innerHeight/2, 30);
+    dlog("YES clicked -> opening screen2");
+
+    // remove NO so it can never block screen2 taps
+    if(noBtn && noBtn.parentNode) noBtn.parentNode.removeChild(noBtn);
+
+    screen1.style.pointerEvents = "none";
+    screen1.classList.add("hidden");
+    screen2.classList.remove("hidden");
+  });
+
+  // =========================
+  // Screen 2 planner (Adelaide)
+  // =========================
+  const pickStatus = document.getElementById("pickStatus");
+  const details = document.getElementById("details");
+  const detailsTitle = document.getElementById("detailsTitle");
+  const detailsMsg = document.getElementById("detailsMsg");
+  const detailsChips = document.getElementById("detailsChips");
+  const venuePicker = document.getElementById("venuePicker");
+  const detailsSetting = document.getElementById("detailsSetting");
+  const messageText = document.getElementById("messageText");
+  const whatsNumber = document.getElementById("whatsNumber");
+  const lockedNote = document.getElementById("lockedNote");
+  const screen2Scroll = document.getElementById("screen2Scroll");
+
+  const sendWhatsBtn = document.getElementById("sendWhatsBtn");
+  const copyBtn = document.getElementById("copyBtn");
+  const shareBtn = document.getElementById("shareBtn");
+  const lockPlanBtn = document.getElementById("lockPlanBtn");
+  const chooseAgainBtn = document.getElementById("chooseAgainBtn");
+
+  let selectedKey = null;
+  let selectedVenue = null;
+
+  const afterPlans = {
+    lunch: {
+      title: "🍽️ Lunch (family-friendly)",
+      msg: "Bounce burns energy… now we refuel 😄 Bonus points if we don’t end up eating their fries.",
+      chips: ["👨‍👩‍👧‍👦 Family vibe", "🥤 Easy", "📸 Cute pic", "😄 Low stress"],
+      venues: [
+        { name:"Glenelg — Beachfront lunch strip", note:"Easy walk after + kid-friendly." },
+        { name:"Adelaide Central Market (food stalls)", note:"Pick-your-own feast, fun for everyone." },
+        { name:"Henley Beach — cafes + stroll", note:"Relaxed, sunny, and photogenic." },
+        { name:"Rundle Street (East End) — casual spots", note:"Plenty of options + dessert nearby." }
+      ],
+      setting: [
+        "12:15–1:30 lunch (everyone’s hungry).",
+        "One family photo (proof for the archives 😄).",
+        "Quick playground stop if needed.",
+        "Then optional: dessert or beach walk."
+      ]
+    },
+    picnic: {
+      title: "🧺 Picnic + playground",
+      msg: "Cute + wholesome. We’ll pretend we planned it perfectly (we did 😎).",
+      chips: ["🌿 Outdoors", "🧃 Snacks", "🧺 Picnic", "🛝 Playground"],
+      venues: [
+        { name:"Adelaide Botanic Garden", note:"Beautiful, calm, great for kids and photos." },
+        { name:"Elder Park (River Torrens)", note:"Big open space + easy walk." },
+        { name:"Himeji Garden", note:"Pretty + peaceful, great mini-stroll." },
+        { name:"Victoria Park / Park Lands", note:"Space to run + easy parking." }
+      ],
+      setting: [
+        "Pick-up snacks (fruit + pastries + juice).",
+        "Picnic rug + 30 mins calm time.",
+        "Kids play, parents recharge.",
+        "Finish with ice cream (non-negotiable)."
+      ]
+    },
+    dessert: {
+      title: "🍨 Dessert date (sweet tooth)",
+      msg: "Correct option 😌 Sweet treat + sweet wife = unbeatable combo.",
+      chips: ["🍫 Sweet", "☕ Coffee", "📸 Cute snap", "😄 Quick & fun"],
+      venues: [
+        { name:"St Louis House of Fine Ice Cream & Desserts (Glenelg / City)", note:"Classic dessert stop." },
+        { name:"48 Flavours (various)", note:"Everyone picks their favourite." },
+        { name:"Steven ter Horst Chocolatier (City)", note:"Fancy chocolate energy." },
+        { name:"Rundle Street dessert crawl", note:"Walk + choose anything you want." }
+      ],
+      setting: [
+        "Dessert + coffee/juice.",
+        "Rate desserts out of 10 (no fighting 😄).",
+        "Short walk to digest + talk.",
+        "Optional: sunset plan next."
+      ]
+    },
+    beach: {
+      title: "🌊 Beach / sunset walk",
+      msg: "Fresh air + cute walk + hand-holding protocol 🤝😄",
+      chips: ["🌅 Sunset", "🌊 Beach", "🤝 Walk", "📸 Photos"],
+      venues: [
+        { name:"Glenelg Beach", note:"Easy classic. Jetty walk + snacks." },
+        { name:"Henley Beach", note:"Lovely vibes + cafes." },
+        { name:"Semaphore Beach", note:"Family-friendly + fun atmosphere." },
+        { name:"Brighton Beach", note:"Relaxed, pretty." }
+      ],
+      setting: [
+        "Beach stroll + one scenic photo.",
+        "Kids run, parents chill.",
+        "Stop for chips/ice cream.",
+        "Sunset moment: quick ‘what I love about you’ 💖"
+      ]
+    },
+    movie: {
+      title: "🍿 Movie (kids or us)",
+      msg: "Movie time 😄 You pick. I’ll pretend I’m not emotional 😭",
+      chips: ["🍿 Snacks", "🧣 Cozy", "😄 Easy win", "🤫 Quiet time"],
+      venues: [
+        { name:"Palace Nova East End", note:"Great cinema vibe + East End walk." },
+        { name:"Event Cinemas Marion", note:"Easy family choice." },
+        { name:"Wallis Cinemas (various)", note:"Local option." },
+        { name:"Home movie night", note:"Blanket fort + snacks + comfy." }
+      ],
+      setting: [
+        "Pick a movie everyone can enjoy.",
+        "Popcorn + one extra snack (secret).",
+        "After: short walk + dessert if energy remains.",
+        "End with cozy family time."
+      ]
+    },
+    dinner: {
+      title: "🌙 Dinner (romantic-ish)",
+      msg: "Romantic… but still laughing like idiots 😄",
+      chips: ["🕯️ Date vibe", "🌙 Evening", "🍫 Dessert", "💖 Us time"],
+      venues: [
+        { name:"Peel St (CBD)", note:"Great for dinner + walk after." },
+        { name:"Osteria Oggi (City)", note:"Italian comfort + date vibe." },
+        { name:"Africola (East End)", note:"Popular, lively (book if you can)." },
+        { name:"SkyCity / Riverbank precinct", note:"Lights + stroll + photos." }
+      ],
+      setting: [
+        "Early dinner (kid-friendly timing).",
+        "One shared dessert (mandatory).",
+        "Tiny ‘cheers’ moment to us 💖",
+        "Short night walk: lights + photos."
+      ]
+    },
+    staycation: {
+      title: "🏨 Staycation (Adelaide city)",
+      msg: "Ok wow 😌 City staycation energy. We deserve it.",
+      chips: ["🏨 Staycation", "🕯️ Cozy", "😌 Relax", "💖 Special"],
+      venues: [
+        { name:"Mayfair Hotel (CBD)", note:"Boutique feel + great location." },
+        { name:"Eos by SkyCity (Riverbank)", note:"Modern luxury + views." },
+        { name:"The Playford (North Terrace)", note:"Classic Adelaide pick." },
+        { name:"Oval Hotel", note:"Unique + fun." }
+      ],
+      setting: [
+        "Check-in + relax.",
+        "Quick dinner nearby (or room service).",
+        "Photos + laughs + unwind.",
+        "Next morning: slow breakfast."
+      ]
+    },
+    massage: {
+      title: "💆 Spa / massage reset",
+      msg: "We’ll come out feeling brand new 😄 Calm wife = happy hubby (facts).",
+      chips: ["🧖 Spa", "🕯️ Calm", "🫧 Refresh", "☕ Tea after"],
+      venues: [
+        { name:"Endota Spa (various Adelaide)", note:"Reliable relaxation option." },
+        { name:"Temple Day Spa (Glenelg area)", note:"Beachside unwind." },
+        { name:"CBD wellness spa option", note:"Pair with dinner after." },
+        { name:"Massage + dessert combo", note:"Best of both worlds 😌" }
+      ],
+      setting: [
+        "Pick relaxation/pressure level.",
+        "No phones during spa time.",
+        "Tea/water after + slow talk.",
+        "Finish with dessert or light dinner."
+      ]
+    }
+  };
+
+  function renderChips(items){
+    detailsChips.innerHTML = "";
+    items.forEach(t => {
+      const c = document.createElement("div");
+      c.className = "chip";
+      c.textContent = t;
+      detailsChips.appendChild(c);
+    });
+  }
+  function renderSetting(items){
+    detailsSetting.innerHTML = "";
+    items.forEach(t => {
+      const li = document.createElement("li");
+      li.textContent = t;
+      detailsSetting.appendChild(li);
+    });
+  }
+  function renderVenues(plan){
+    venuePicker.innerHTML = "";
+    selectedVenue = null;
+
+    plan.venues.forEach(v => {
+      const row = document.createElement("label");
+      row.className = "venueRow";
+
+      const input = document.createElement("input");
+      input.type = "radio";
+      input.name = "venue";
+      input.value = v.name;
+
+      input.addEventListener("change", () => {
+        selectedVenue = v.name;
+        messageText.value = buildMessage();
+        dlog("Venue selected: " + v.name);
+      });
+
+      const text = document.createElement("div");
+      text.innerHTML =
+        "<b>" + v.name + "</b>" +
+        "<div style='opacity:.85;font-size:13px;margin-top:2px;'>" + v.note + "</div>";
+
+      row.appendChild(input);
+      row.appendChild(text);
+      venuePicker.appendChild(row);
+    });
+  }
+
+  function buildMessage(){
+    const plan = afterPlans[selectedKey];
+    const venueLine = selectedVenue ? ("Venue: " + selectedVenue) : "Venue: (pick one!)";
+    return [
+      "Mandeep 💖",
+      "",
+      "Valentine’s plan from your Hubby Maninder 😎",
+      "City: Adelaide",
+      "",
+      "Morning (with our little ones):",
+      "• 9:00–12:00 Bounce Australia ✅",
+      "",
+      "After Bounce:",
+      "• " + plan.title,
+      venueLine,
+      "",
+      "Mini plan:",
+      "• Lunch/snack + hydrate",
+      "• One family photo 📸",
+      "• Sweet moment with you 💖",
+      "",
+      "Reply with: ✅ YES + preferred time"
+    ].join("\n");
+  }
+
+  function selectAfter(key){
+    selectedKey = key;
+    const plan = afterPlans[key];
+    dlog("Option selected: " + key);
+
+    pickStatus.textContent = "✅ Selected: " + plan.title;
+    detailsTitle.textContent = plan.title + " — Adelaide";
+    detailsMsg.textContent = plan.msg;
+
+    renderChips(plan.chips);
+    renderSetting(plan.setting);
+    renderVenues(plan);
+
+    messageText.value = buildMessage();
+    lockedNote.style.display = "none";
+    details.classList.remove("hidden");
+
+    burst(window.innerWidth*0.5, window.innerHeight*0.30, 20);
+
+    details.scrollIntoView({ behavior:"smooth", block:"start" });
+  }
+
+  document.querySelectorAll(".optionBtn").forEach(btn => {
+    const key = btn.getAttribute("data-key");
+    btn.addEventListener("click", (e) => { e.preventDefault(); e.stopPropagation(); selectAfter(key); });
+    btn.addEventListener("touchstart", (e) => { e.preventDefault(); e.stopPropagation(); selectAfter(key); }, {passive:false});
+  });
+
+  function digitsOnly(raw){ return (raw || "").trim().replace(/[^\d]/g, ""); }
+
+  sendWhatsBtn.addEventListener("click", () => {
+    if(!selectedKey){ alert("Pick an after-Bounce option first 😄"); return; }
+    const text = encodeURIComponent(messageText.value);
+    const digits = digitsOnly(whatsNumber.value);
+    const url = digits ? ("https://wa.me/" + digits + "?text=" + text) : ("https://wa.me/?text=" + text);
+    dlog("Opening WhatsApp link");
+    window.open(url, "_blank");
+  });
+
+  copyBtn.addEventListener("click", async () => {
+    try{
+      await navigator.clipboard.writeText(messageText.value);
+      dlog("Copied to clipboard");
+    } catch {
+      messageText.focus(); messageText.select();
+      document.execCommand("copy");
+      dlog("Copied to clipboard (fallback)");
+    }
+  });
+
+  shareBtn.addEventListener("click", async () => {
+    if(navigator.share){
+      try{
+        await navigator.share({ title: "Valentine Plan", text: messageText.value });
+        dlog("Shared via Web Share API");
+      } catch { dlog("Share cancelled"); }
+    } else {
+      copyBtn.click();
+      alert("Share not supported here. Message copied ✅");
+    }
+  });
+
+  lockPlanBtn.addEventListener("click", () => {
+    if(!selectedKey){ alert("Pick an option first 😄"); return; }
+    lockedNote.style.display = "block";
+    dlog("Plan locked");
+    burst(window.innerWidth*0.5, window.innerHeight*0.22, 28);
+  });
+
+  chooseAgainBtn.addEventListener("click", () => {
+    details.classList.add("hidden");
+    lockedNote.style.display = "none";
+    pickStatus.textContent = "👆 Pick one “after Bounce” option";
+    selectedKey = null;
+    selectedVenue = null;
+    messageText.value = "";
+    venuePicker.innerHTML = "";
+    detailsChips.innerHTML = "";
+    detailsSetting.innerHTML = "";
+    dlog("Reset planner");
+    screen2Scroll.scrollTo({ top: 0, behavior: "smooth" });
+  });
+
+  dlog("Page loaded OK");
+</script>
+</body>
+</html>
